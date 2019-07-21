@@ -1,0 +1,67 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    outline: 1px red solid;
+}
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+
+    background-color: rgba(230, 10, 10, 0.5);
+}
+
+                    /*TOP*/
+header {
+    height: 60px;
+    padding: 20px;
+}
+.hamburger {
+    float: left;
+}
+.socialMedia {
+    float: right;
+
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+li {
+    float: left;
+    margin: 0px 5px;
+}
+
+
+                    /*MIDDLE*/
+main {
+    height: 80vh;
+    padding: 0px 40px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.artist {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.logo {
+    position: absolute;
+}
+.presentation, .name {
+    font-size: 3vh;
+}
+
+                    
+                    /*BOTTOM*/
+footer {
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
