@@ -67,12 +67,14 @@ main {
                     /*BOTTOM*/
 footer {
     height: 60px;
+    
     display: flex;
     justify-content: center;
     align-items: center;
 
+    transition: 500ms all ease;
 }
 
-.moreInfo:hover {
+.moreInfo:hover, li:hover, .hamburger:hover, .left:hover, .right:hover {
     cursor: pointer;
 }
