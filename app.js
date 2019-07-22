@@ -1,4 +1,5 @@
 const main = document.querySelector("main");
+const footer = document.querySelector("footer");
 
 const more = document.querySelector("#more");
 const left = document.querySelector("#more");
@@ -13,8 +14,8 @@ more.addEventListener("click",()=> {
 });
 
 function moveOut() {
-    main.style.display = "inline";
-    left.style.left = "15px";
+    /*main.style.padding = "0px 0px";*/
+    footer.style.alignItems = "flex-end";
 
     /*
     

@@ -9,7 +9,8 @@ body {
     display: flex;
     flex-direction: column;
 
-    background-color: rgba(230, 10, 10, 0.5);
+    color: white;
+    background-color: black;
 }
 
                     /*TOP*/
@@ -42,6 +43,8 @@ main {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+
+    transition: 300ms ease-in-out all;
 }
 .artist {
     display: flex;
@@ -50,7 +53,11 @@ main {
     align-items: center;
 }
 .logo {
+    width: 80px;
+    height: 120px;
+
     position: absolute;
+    z-index: -1;
 }
 .presentation, .name {
     font-size: 3vh;
@@ -59,14 +66,13 @@ main {
                     
                     /*BOTTOM*/
 footer {
-    height: 17vh;
+    height: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-.moreInfo {
 
 }
+
 .moreInfo:hover {
     cursor: pointer;
 }
