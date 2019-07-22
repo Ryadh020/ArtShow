@@ -17,15 +17,30 @@ more.addEventListener("click",()=> {
     setTimeout(()=> {
         fadeIt();
     },200);
+    setTimeout(()=> {
+        moveUp();
+    },300)
 });
 
 // FUNCTIONS : 
 function moveOut() {
-        main.style.padding = "0px 0px";
-        footer.style.alignItems = "flex-end";
+    main.style.padding = "0px 0px";
+    footer.style.alignItems = "flex-end";
 }
 function fadeIt() {
-        left.style.visibility =  "hidden";
-        right.style.visibility =  "hidden";
-        more.style.visibility =  "hidden";
+    left.style.visibility =  "hidden";
+    right.style.visibility =  "hidden";
+    more.style.visibility =  "hidden";
+}
+function moveUp() {
+    logo.style.bottom = "20px";
+    logo.style.visibility = "hidden";
+
+    standart.style.position = "absolute";
+    standart.style.top = "20px";
+    standart.style.fontSize = "2vh"
+
+    artistName.style.position = "absolute";
+    artistName.style.top = "32px";
+    artistName.style.fontSize = "2.5vh";
 }
