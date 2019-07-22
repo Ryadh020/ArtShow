@@ -9,7 +9,6 @@ body {
     display: flex;
     flex-direction: column;
 
-
     background-color: rgba(230, 10, 10, 0.5);
 }
 
@@ -60,8 +59,14 @@ main {
                     
                     /*BOTTOM*/
 footer {
-    height: 10vh;
+    height: 17vh;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+}
+.moreInfo {
+
+}
+.moreInfo:hover {
+    cursor: pointer;
 }
