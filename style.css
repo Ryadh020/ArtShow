@@ -46,6 +46,7 @@ main {
 
     transition: 300ms ease-in-out all;
 }
+
 .artist {
     display: flex;
     flex-direction: column;
@@ -61,8 +62,9 @@ main {
 }
 .presentation, .name {
     font-size: 3vh;
-}
 
+    transition: 300ms ease-in-out all;
+}
                     
                     /*BOTTOM*/
 footer {
@@ -77,4 +79,7 @@ footer {
 
 .moreInfo:hover, li:hover, .hamburger:hover, .left:hover, .right:hover {
     cursor: pointer;
+}
+.moreInfo:hover {
+    padding-top: 4px;
 }
