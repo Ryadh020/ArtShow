@@ -1,6 +1,6 @@
 let art = {
     artistsNames: [
-        "A N D R E - L A R C E V", "P I C A S S O", "M E M E"
+        "2 P A C", "ICE CUBE", "S M I T H"
     ],
     artistsLogos: [
         "./images/1.png", "./images/2.png", "./images/3.png",

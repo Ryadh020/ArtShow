@@ -67,8 +67,8 @@ main {
     transition: 300ms ease all;
 }
 .logo {
-    width: 80px;
-    height: 120px;
+    width: 280px;
+    height: 320px;
 
     position: absolute;
     z-index: -1;

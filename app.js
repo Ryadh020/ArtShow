@@ -108,13 +108,15 @@ function moveUp() {
 
     //pick the artist number :
 function pickArtist(index) {
-    logos = art.artistsLogos[index];
-    artistNames = art.artistsNames[index];
-    arts = art.arts[index];
-
-        // Print the result :
-    logo.setAttribute("src", logos);
-    artistName.textContent = `${artistNames}`;
+    setTimeout(()=> {
+        logos = art.artistsLogos[index];
+        artistNames = art.artistsNames[index];
+        arts = art.arts[index];
+    
+            // Print the result :
+        logo.setAttribute("src", logos);
+        artistName.textContent = `${artistNames}`;
+    },650);
 }
 
     //Animate left and right buttons onclick:
