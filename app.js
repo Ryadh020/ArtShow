@@ -28,27 +28,27 @@ let arts;
         //Pick another artist(to the right):
         right.addEventListener("click", ()=> {
             if(num===0 || num <art.arts.length-1) {
+                animateButton(right);
                 num += 1;
                 pickArtist(num);
-                console.log(num);
             }else if(num===art.artistsNames.length-1) {
+                animateButton(right);
                 num = 0;
                 pickArtist(num); 
-                console.log(num);
             }
         })
 
         //Pick another artist(to the left):
         left.addEventListener("click", ()=> {
-            if(num <=2 && num!==0) {
+            if(num <=art.artistsNames.length-1 && num!==0) {
+                animateButton(left);
                 num -= 1;
                 pickArtist(num);
-                console.log(num);
                 
             }else if(num===0) {
+                animateButton(left);
                 num = art.artistsNames.length-1;
                 pickArtist(num); 
-                console.log(num);
             }
         })
 
@@ -119,4 +119,12 @@ function pickArtist(index) {
     logo.setAttribute("src", logos);
         artistName.textContent = `${artistNames}`;
         console.log(arts);
+}
+
+    //Animate left and right buttons onclick:
+function animateButton(button) {
+    button.style.fontSize = "0.5rem";
+    setTimeout(()=> {
+        button.style.fontSize = "1rem";
+    },300);
 }
