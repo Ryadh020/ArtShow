@@ -125,7 +125,7 @@ function animateButton(button) {
     },300);
 }
 
-    //slide Artists logos:
+    //slide Artists logos :
 function slideLogo(first,second) {
     artist.style.position = "absolute";
     artist.style.left = `${first}%`;
