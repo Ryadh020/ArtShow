@@ -1,4 +1,5 @@
 const main = document.querySelector("main");
+const artist = document.querySelector(".artist");
 const footer = document.querySelector("footer");
 
 const more = document.querySelector("#more");
@@ -15,24 +16,24 @@ let logos ;
 let artistNames ;
 let arts;
 
-
-
 // CHOOSE THE ARTISTS AND IT'S ART :
 (function () {
-        // the number of the artist :
+        // the first number of the artist :
     let num = 0;
 
-        //pick the artist :
+        //pick the first artist :
     pickArtist(num);
 
         //Pick another artist(to the right):
         right.addEventListener("click", ()=> {
             if(num===0 || num <art.arts.length-1) {
                 animateButton(right);
+                slideLogo(50,30);
                 num += 1;
                 pickArtist(num);
             }else if(num===art.artistsNames.length-1) {
                 animateButton(right);
+                slideLogo(50,30);
                 num = 0;
                 pickArtist(num); 
             }
@@ -42,11 +43,13 @@ let arts;
         left.addEventListener("click", ()=> {
             if(num <=art.artistsNames.length-1 && num!==0) {
                 animateButton(left);
+                slideLogo(30,50);
                 num -= 1;
                 pickArtist(num);
                 
             }else if(num===0) {
                 animateButton(left);
+                slideLogo(30,50);
                 num = art.artistsNames.length-1;
                 pickArtist(num); 
             }
@@ -54,13 +57,7 @@ let arts;
 
 })();
 
-
-
-
-
-
-
-// FADE OUT ARROWS WHEN CLICK THE MORE BUTTON :
+// FADE OUT ARROWS LOGO ARTTIST WHEN CLICK THE MORE BUTTON :
 more.addEventListener("click",()=> {
     setTimeout(()=> {
         moveOut();
@@ -117,8 +114,7 @@ function pickArtist(index) {
 
         // Print the result :
     logo.setAttribute("src", logos);
-        artistName.textContent = `${artistNames}`;
-        console.log(arts);
+    artistName.textContent = `${artistNames}`;
 }
 
     //Animate left and right buttons onclick:
@@ -127,4 +123,19 @@ function animateButton(button) {
     setTimeout(()=> {
         button.style.fontSize = "1rem";
     },300);
+}
+
+    //slide Artists logos:
+function slideLogo(first,second) {
+    artist.style.position = "absolute";
+    artist.style.left = `${first}%`;
+    artist.style.opacity ="0";
+    setTimeout(()=> {
+        artist.style.position = "absolute";
+        artist.style.left = `${second}%`;
+    },350)
+    setTimeout(()=> {
+        artist.style.opacity ="1";
+        artist.style.position = "initial";
+    },650)
 }

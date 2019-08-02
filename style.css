@@ -1,7 +1,7 @@
 * {
     margin: 0;
     box-sizing: border-box;
-    /*outline: 1px red solid;*/
+    outline: 1px red solid;
 }
 body {
     width: 100vw;
@@ -35,10 +35,16 @@ li {
 
 
                     /*MIDDLE*/
-.left, .right {
+.left, .right ,#more {
     padding: 15px;
     font-size: 1rem;
+    border-radius: 50%;
+
     transition: all 100ms ease;
+}
+.left:hover, .right:hover ,#more:hover {
+    box-shadow: 0 0 30px 2px white;
+    transition: all 500ms ease;
 }
 main {
     height: 80vh;
@@ -58,7 +64,7 @@ main {
     justify-content: center;
     align-items: center;
 
-    transition: 300ms ease-in-out all;
+    transition: 300ms ease all;
 }
 .logo {
     width: 80px;
@@ -67,12 +73,12 @@ main {
     position: absolute;
     z-index: -1;
 
-    transition: 300ms ease-in-out all;
+   /* transition: 300ms ease-in-out all;*/
 }
 .presentation, .name {
     font-size: 3vh;
 
-    transition: 300ms ease-in-out all;
+ /*   transition: 300ms ease-in-out all;*/
 }
                     
                     /*BOTTOM*/
