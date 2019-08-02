@@ -1,7 +1,7 @@
 * {
     margin: 0;
     box-sizing: border-box;
-    outline: 1px red solid;
+   /* outline: 1px red solid;*/
 }
 body {
     width: 100vw;
@@ -11,6 +11,7 @@ body {
 
     color: white;
     background-color: black;
+    font-family: 'Amatic SC', cursive;
 }
 
                     /*TOP*/
@@ -76,7 +77,8 @@ main {
    /* transition: 300ms ease-in-out all;*/
 }
 .presentation, .name {
-    font-size: 3vh;
+    font-size: 7vh;
+    line-height: 1.5;
 
  /*   transition: 300ms ease-in-out all;*/
 }
