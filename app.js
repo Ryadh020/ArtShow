@@ -10,6 +10,12 @@ const logo = document.querySelector("#logo");
 const standart = document.querySelector("#standart");
 const artistName = document.querySelector("#artistName");
 
+const boxes = document.querySelector(".boxes");
+const box = document.querySelector(".box");
+const box1 = document.querySelector(".box1");
+const box2 = document.querySelector(".box2");
+const box3 = document.querySelector(".box3");
+const box4 = document.querySelector(".box4");
 
 // DATA BASE :                   {choos it randomly}
 let logos ;
@@ -19,7 +25,7 @@ let arts;
 // CHOOSE THE ARTISTS AND IT'S ART :
 (function () {
         // the first number of the artist :
-    let num = 0;
+    let num = 2;
 
         //pick the first artist :
     pickArtist(num);
@@ -59,18 +65,21 @@ let arts;
 
 // FADE OUT ARROWS LOGO ARTTIST WHEN CLICK THE MORE BUTTON :
 more.addEventListener("click",()=> {
+    
     setTimeout(()=> {
         moveOut();
     },0);
     setTimeout(()=> {
         fadeIt();
+        boxes.style.left = "0vw"
     },200);
     setTimeout(()=> {
         logo.style.visibility = "hidden";
         moveUp();
+        boxesRightToLeft();
     },300);
     setTimeout(()=> {
-        minimize();
+        minimize(); 
     },400);
 
 });
@@ -140,4 +149,12 @@ function slideLogo(first,second) {
         artist.style.opacity ="1";
         artist.style.position = "initial";
     },650)
+}
+
+    //Boxes from right to left
+function boxesRightToLeft() {
+    box1.style.margin = "0px 100px";
+    box2.style.margin = "0px 100px";
+    box3.style.margin = "0px 100px";
+    box4.style.margin = "0px 100px";
 }
