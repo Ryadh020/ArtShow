@@ -17,6 +17,9 @@ const box2 = document.querySelector(".box2");
 const box3 = document.querySelector(".box3");
 const box4 = document.querySelector(".box4");
 
+const sliders = document.querySelector(".sliders");
+const slider = document.querySelector("#slider");
+
 // DATA BASE :                   {choos it randomly}
 let logos ;
 let artistNames ;
@@ -80,6 +83,7 @@ more.addEventListener("click",()=> {
     },300);
     setTimeout(()=> {
         minimize(); 
+        ShoxboxesSliders()
     },400);
 
 });
@@ -153,8 +157,14 @@ function slideLogo(first,second) {
 
     //Boxes from right to left
 function boxesRightToLeft() {
-    box1.style.margin = "0px 100px";
-    box2.style.margin = "0px 100px";
-    box3.style.margin = "0px 100px";
-    box4.style.margin = "0px 100px";
+    box1.style.margin = "0px 30px";
+    box2.style.margin = "0px 30px";
+    box3.style.margin = "0px 30px";
+    box4.style.margin = "0px 30px";
+}
+
+    //Shox boxes sliders:
+function ShoxboxesSliders() {
+    sliders.style.top = "80vh";
+    //slider.style.margin = "0px 0px";
 }

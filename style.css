@@ -1,7 +1,7 @@
 * {
     margin: 0;
     box-sizing: border-box;
-    /*outline: 1px red solid;*/
+    outline: 1px red solid;
 }
 body {
     width: 100vw;
@@ -117,28 +117,56 @@ footer {
     justify-content: center;
     align-items: center;
 
-    transition: all 2.5s ease-out;
+    transition: all 1s ease-out;
 }
 .box {
-    width: 100px;
-    height: 200px;
+    width: 250px;
+    height: 300px;
+    border-radius: 10px;
     
     background-color: pink;
-    transition: all 2.5s ease-out;
+    transition: all 1s ease-out;
+}
+.box:hover, .box:visited {
+    cursor: pointer;
+    width: 270px;
+    height: 320px;
+
+    transition: all 0.3s ease-out;
 }
 
 .box1 {
     margin: 0px 150px;
 }
 .box2 {
-    margin: 0px 200px;
+    margin: 0px 150px;
 }
 .box3 {
-    margin: 0px 250px;
+    margin: 0px 150px;
 }
 .box4 {
-    margin: 0px 300px;
+    margin: 0px 150px;
 }
 
+/* boxes slider :*/
+.sliders {
+    position: absolute;
+    top: 200vh;
+    left: 45%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+
+    transition: all 1s ease-out;
+}
+#slider {
+    padding: 5px;
+    margin: 0px 5px;
+}
+#slider:hover{
+    cursor: pointer;
+}
 
 
