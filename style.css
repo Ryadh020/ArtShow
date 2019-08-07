@@ -1,7 +1,7 @@
 * {
     margin: 0;
     box-sizing: border-box;
-    /*outline: 1px red solid;*/
+    outline: 1px red solid;
 }
 body {
     width: 100vw;
@@ -20,6 +20,8 @@ body {
 header {
     height: 60px;
     padding: 20px;
+
+    z-index: +1;
 }
 .hamburger {
     float: left;
@@ -76,7 +78,7 @@ main {
     position: absolute;
     z-index: -1;
 
-   /* transition: 300ms ease-in-out all;*/
+    /*transition: all 1s ease-out;*/
 }
 .presentation, .name {
     font-size: 7vh;
@@ -123,6 +125,7 @@ footer {
     width: 250px;
     height: 300px;
     border-radius: 10px;
+    margin: 0px 150px;
     
     background-color: pink;
     transition: all 1s ease-out;
@@ -133,19 +136,6 @@ footer {
     height: 320px;
 
     transition: all 0.3s ease-out;
-}
-
-.box1 {
-    margin: 0px 150px;
-}
-.box2 {
-    margin: 0px 150px;
-}
-.box3 {
-    margin: 0px 150px;
-}
-.box4 {
-    margin: 0px 150px;
 }
 
 /* boxes slider :*/

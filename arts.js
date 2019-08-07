@@ -1,3 +1,5 @@
+//  DATA BASE :
+
 let art = {
     artistsNames: [
         "2 P A C", "ICE CUBE", "S M I T H"
@@ -14,3 +16,17 @@ let art = {
         
     ]
 }
+
+let artsOfArtists = {
+    0:[
+        "./images/1/1.png", "./images/1/2.png", "./images/1/3.png","./images/1/4.png"
+    ],
+    1:[
+        "./images/2/1.png", "./images/2/2.png", "./images/2/3.png",
+    ],
+    2:[
+        "./images/2/1.png", "./images/2/2.png", "./images/2/3.png",
+    ],
+    
+}
+
