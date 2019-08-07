@@ -1,3 +1,4 @@
+// SWIPE ARTISTS FROM LEFT TO RIGHT:
 (function () {
         // the first number of the artist :
     num = 0;
@@ -41,16 +42,47 @@ more.addEventListener("click",()=> {
     },0);
     setTimeout(()=> {
         fadeIt();
+        CreateBoxes(num);
         boxes.style.left = "0vw"
     },200);
     setTimeout(()=> {
         logo.style.visibility = "hidden";
         moveUp();
-        
+        MinifyBoxesMargin(num);
     },300);
     setTimeout(()=> {
         minimize(); 
-        ShoxboxesSliders()
+        ShowboxesSliders()
     },400);
 
 });
+
+//Sliders buttons:
+
+    //Get more boxes (to the right):
+    sliderRight.addEventListener("click", ()=> {
+        if(artsOfArtists[num].length >=3 && boxes.style.left === "0vw") {
+            moreBoxes("-95vw");
+            setTimeout(()=> {
+                BigfyBoxesMargin(num);
+            },0);
+            setTimeout(()=> {
+                MinifyBoxesMargin(num);
+            },600);
+        }
+    });
+    //Pick another artist(to the left):
+    sliderLeft.addEventListener("click", ()=> {
+        if(boxes.style.left === "-95vw") {
+            moreBoxes("0vw");
+            setTimeout(()=> {
+                BigfyBoxesMargin(num);
+            },0);
+            setTimeout(()=> {
+                MinifyBoxesMargin(num);
+            },600);
+            return;
+        }else {
+            return;
+        }
+    });

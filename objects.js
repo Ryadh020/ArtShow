@@ -15,4 +15,5 @@ const boxes = document.querySelector(".boxes");
 const box = document.querySelector(".box");
 
 const sliders = document.querySelector(".sliders");
-const slider = document.querySelector("#slider");
+const sliderLeft = document.querySelector("#sliderLeft");
+const sliderRight = document.querySelector("#sliderRight");

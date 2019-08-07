@@ -2,6 +2,9 @@ let logos ;
 let artistNames ;
 let arts;
 let num;
+let boxe = "";
+var boxNum;
+var boxClassNum;
 
 // FUNCTIONS : 
 
@@ -69,10 +72,42 @@ let num;
         },650)
     }
     
-        //Boxes from right to left
+        //Boxes from right to left :
+    function CreateBoxes(number) {
+        boxNum =0;
+        
+        artsOfArtists[number].forEach(element => {
+            boxe += `<div class="box box${boxNum}"></div>`;
+            boxNum +=1;
+        });
+        boxes.innerHTML = boxe;
+    }
+        //Get more boxes from right to left :
+    function moreBoxes(left) {
+        boxes.style.left = `${left}`;
+    }
+        // get the boxes margin smaller
+    function MinifyBoxesMargin(number) {
+        boxClassNum = 0;
 
+        artsOfArtists[number].forEach(element => {
+            document.querySelector(`.box${boxClassNum}`).style.margin = "0px 40px";
+            boxClassNum += 1;
+        });
+    } 
+        // get the boxes margin bigger
+    function BigfyBoxesMargin(number) {
+        boxClassNum = 0;
+
+        artsOfArtists[number].forEach(element => {
+            document.querySelector(`.box${boxClassNum}`).style.margin = "0px 200px";
+            boxClassNum += 1;
+        });
+    }
+    
         //Show boxes sliders:
-    function ShoxboxesSliders() {
+    function ShowboxesSliders() {
+        
         sliders.style.top = "80vh";
         //slider.style.margin = "0px 0px";
     } 

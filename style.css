@@ -1,7 +1,7 @@
 * {
     margin: 0;
     box-sizing: border-box;
-    outline: 1px red solid;
+    /*outline: 1px red solid;*/
 }
 body {
     width: 100vw;
@@ -112,7 +112,7 @@ footer {
 .boxes {
     position: absolute;
     left: 100vw;
-    width: 100vw;
+    /*width: 100vw;*/
     height: 100vh;
     display: flex;
     flex-direction: row;
@@ -125,7 +125,7 @@ footer {
     width: 250px;
     height: 300px;
     border-radius: 10px;
-    margin: 0px 150px;
+    margin: 0px 200px;
     
     background-color: pink;
     transition: all 1s ease-out;
@@ -141,6 +141,7 @@ footer {
 /* boxes slider :*/
 .sliders {
     position: absolute;
+    z-index: 0;
     top: 200vh;
     left: 45%;
     display: flex;
@@ -151,11 +152,11 @@ footer {
 
     transition: all 1s ease-out;
 }
-#slider {
+#sliderLeft, #sliderRight {
     padding: 5px;
     margin: 0px 5px;
 }
-#slider:hover{
+#sliderRight:hover, #sliderLeft:hover{
     cursor: pointer;
 }
 
