@@ -58,13 +58,23 @@ more.addEventListener("click",()=> {
 });
 
 //Sliders buttons:
+let toLeft = 0;
 
     //Get more boxes (to the right):
     sliderRight.addEventListener("click", ()=> {
-        if(artsOfArtists[num].length >=3 && boxes.style.left === "0vw") {
-            moreBoxes("-95vw");
+        if(artsOfArtists[num].length >=3  && !(toLeft === ((Math.floor((artsOfArtists[num].length)/4) * -1000)))) {
+            toLeft -= 1000;
+            moreBoxes(`${toLeft}px`);
+            console.log(toLeft);
             setTimeout(()=> {
-                BigfyBoxesMargin(num);
+                BigfyBoxesMargin(num, 100);
+            },0);
+            setTimeout(()=> {
+                MinifyBoxesMargin(num);
+            },600);
+        }else if(artsOfArtists[num].length <3 || toLeft === (((artsOfArtists[num].length)/4 * -1000))) {
+            setTimeout(()=> {
+                BigfyBoxesMargin(num, 50);
             },0);
             setTimeout(()=> {
                 MinifyBoxesMargin(num);
@@ -73,16 +83,16 @@ more.addEventListener("click",()=> {
     });
     //Pick another artist(to the left):
     sliderLeft.addEventListener("click", ()=> {
-        if(boxes.style.left === "-95vw") {
-            moreBoxes("0vw");
+        //if(boxes.style.left === `${toLeft}px`) {
+            toLeft += 1000;
+            moreBoxes(`${toLeft}`);
+            console.log(toLeft);
             setTimeout(()=> {
                 BigfyBoxesMargin(num);
             },0);
             setTimeout(()=> {
                 MinifyBoxesMargin(num);
             },600);
-            return;
-        }else {
-            return;
-        }
+        //}
+        
     });

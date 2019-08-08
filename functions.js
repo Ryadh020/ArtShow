@@ -96,11 +96,11 @@ var boxClassNum;
         });
     } 
         // get the boxes margin bigger
-    function BigfyBoxesMargin(number) {
+    function BigfyBoxesMargin(number, margin) {
         boxClassNum = 0;
 
         artsOfArtists[number].forEach(element => {
-            document.querySelector(`.box${boxClassNum}`).style.margin = "0px 200px";
+            document.querySelector(`.box${boxClassNum}`).style.margin = `0px ${margin}px`;
             boxClassNum += 1;
         });
     }
