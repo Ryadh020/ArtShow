@@ -1,7 +1,7 @@
 * {
     margin: 0;
     box-sizing: border-box;
-    outline: 1px red solid;
+    /*outline: 1px red solid;*/
 }
 body {
     width: 100vw;
@@ -111,7 +111,7 @@ footer {
 /* ARTS OF ARTISTS :*/
 .boxes {
     position: absolute;
-    left: 100vw;
+    left: 1000px;
     /*width: 100vw;*/
     height: 100vh;
     display: flex;

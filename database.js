@@ -19,13 +19,13 @@ let art = {
 
 let artsOfArtists = [
     [
-        "./images/1/1.png", "./images/1/2.png", "./images/1/3.png", "./images/1/3.png", "./images/1/3.png", "./images/1/3.png", "./images/1/3.png", "./images/1/3.png"
+        "./images/1/1.png", "./images/1/2.png", "./images/1/3.png", "./images/1/3.png", "./images/1/3.png", "./images/1/3.png", "./images/1/3.png", "./images/1/3.png", "./images/1/3.png", "./images/1/3.png", "./images/1/3.png", "./images/1/3.png", "./images/1/3.png"
     ],
     [
-        "./images/2/1.png", "./images/2/1.png","./images/2/1.png","./images/2/1.png","./images/2/1.png","./images/2/1.png","./images/2/1.png"
+        "./images/2/1.png", "./images/2/1.png", "./images/2/1.png", "./images/2/1.png", "./images/2/1.png", "./images/2/1.png", "./images/2/1.png"
     ],
     [
-        "./images/2/1.png", "./images/2/2.png", 
+        "./images/2/1.png", "./images/2/2.png"
     ],
 ]
 

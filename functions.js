@@ -5,6 +5,7 @@ let num;
 let boxe = "";
 var boxNum;
 var boxClassNum;
+let toLeft = 0;
 
 // FUNCTIONS : 
 
@@ -82,6 +83,14 @@ var boxClassNum;
         });
         boxes.innerHTML = boxe;
     }
+
+        //Show boxes sliders:
+    function ShowboxesSliders() {
+        
+        sliders.style.top = "80vh";
+        //slider.style.margin = "0px 0px";
+    } 
+
         //Get more boxes from right to left :
     function moreBoxes(left) {
         boxes.style.left = `${left}`;
@@ -105,9 +114,3 @@ var boxClassNum;
         });
     }
     
-        //Show boxes sliders:
-    function ShowboxesSliders() {
-        
-        sliders.style.top = "80vh";
-        //slider.style.margin = "0px 0px";
-    } 

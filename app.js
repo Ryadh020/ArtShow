@@ -43,7 +43,7 @@ more.addEventListener("click",()=> {
     setTimeout(()=> {
         fadeIt();
         CreateBoxes(num);
-        boxes.style.left = "0vw"
+        boxes.style.left = "0px"
     },200);
     setTimeout(()=> {
         logo.style.visibility = "hidden";
@@ -58,8 +58,6 @@ more.addEventListener("click",()=> {
 });
 
 //Sliders buttons:
-let toLeft = 0;
-
     //Get more boxes (to the right):
     sliderRight.addEventListener("click", ()=> {
         if(artsOfArtists[num].length >=3  && !(toLeft === ((Math.floor((artsOfArtists[num].length)/4) * -1000)))) {
@@ -83,16 +81,22 @@ let toLeft = 0;
     });
     //Pick another artist(to the left):
     sliderLeft.addEventListener("click", ()=> {
-        //if(boxes.style.left === `${toLeft}px`) {
+        if(!(boxes.style.left === "0px")) {
             toLeft += 1000;
             moreBoxes(`${toLeft}`);
             console.log(toLeft);
             setTimeout(()=> {
-                BigfyBoxesMargin(num);
+                BigfyBoxesMargin(num, 50);
             },0);
             setTimeout(()=> {
                 MinifyBoxesMargin(num);
             },600);
-        //}
-        
+        }else {
+            setTimeout(()=> {
+                BigfyBoxesMargin(num, 50);
+            },0);
+            setTimeout(()=> {
+                MinifyBoxesMargin(num);
+            },600); 
+        }  
     });
