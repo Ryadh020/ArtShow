@@ -56,6 +56,13 @@ let toLeft = 0;
         setTimeout(()=> {
             body.style.backgroundImage = `url("${art.Background[index]}")`;
         },600)
+        if(index === 2) {
+            body.style.color = "black";
+        }else if( index === 1) {
+            body.style.color = "gray";
+        } else {
+            body.style.color = "white";
+        }
     }
     
         //Animate (get smaller than bigger smoothly) left and right buttons onclick:
