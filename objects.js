@@ -1,4 +1,5 @@
 //  OBJECTS :
+const body = document.querySelector("body");
 const main = document.querySelector("main");
 const artist = document.querySelector(".artist");
 const footer = document.querySelector("footer");

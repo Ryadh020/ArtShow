@@ -1,8 +1,11 @@
 //  DATA BASE :
 
 let art = {
+    Background: [
+        "./images/1.Backgrounds/1.png", "./images/1.Backgrounds/2.png", "./images/1.Backgrounds/3.png"
+    ],
     artistsNames: [
-        "2 P A C", "ICE CUBE", "S M I T H"
+        "ANDRE-LACREV", "PINK", "MICROSCOPIC"
     ],
     artistsLogos: [
         "./images/1.png", "./images/2.png", "./images/3.png",

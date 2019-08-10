@@ -50,6 +50,14 @@ let toLeft = 0;
         },650);
     }
     
+
+        // Change the background:
+    function changeBackGround(index) {
+        setTimeout(()=> {
+            body.style.backgroundImage = `url("${art.Background[index]}")`;
+        },600)
+    }
+    
         //Animate (get smaller than bigger smoothly) left and right buttons onclick:
     function animateButton(button) {
         button.style.fontSize = "0.5rem";

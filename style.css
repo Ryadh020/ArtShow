@@ -10,8 +10,12 @@ body {
     flex-direction: column;
 
     color: white;
-    background-color: black;
-    font-family: 'Amatic SC', cursive;
+    /*background-color: black;*/
+    background-image: url(./images/1.Backgrounds/1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    /*font-family: 'Amatic SC', cursive;*/
+    transition: all 0.3s ease-out;
 
     overflow: hidden;
 }
@@ -72,10 +76,11 @@ main {
     transition: 300ms ease all;
 }
 .logo {
-    width: 280px;
-    height: 320px;
+    width: 380px;
+    height: 400px;
 
-    position: absolute;
+    position: relative;
+    top: 50px;
     z-index: -1;
 
     /*transition: all 1s ease-out;*/
@@ -127,13 +132,17 @@ footer {
     border-radius: 10px;
     margin: 0px 200px;
     
-    background-color: pink;
+    background-color: rgb(73, 70, 70);
     transition: all 1s ease-out;
 }
 .box:hover, .box:visited {
+    /*position: absolute;
+    left: 0px;*/
+    width: 260px;
+    height: 310px;
+
     cursor: pointer;
-    width: 270px;
-    height: 320px;
+    
 
     transition: all 0.3s ease-out;
 }

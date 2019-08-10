@@ -11,11 +11,13 @@
                 slideLogo(50,30);
                 num += 1;
                 pickArtist(num);
+                changeBackGround(num);
             }else if(num===art.artistsNames.length-1) {
                 animateButton(right);
                 slideLogo(50,30);
                 num = 0;
                 pickArtist(num); 
+                changeBackGround(num);
             }
         });
         //Pick another artist(to the left):
@@ -25,12 +27,14 @@
                 slideLogo(30,50);
                 num -= 1;
                 pickArtist(num);
+                changeBackGround(num);
                 
             }else if(num===0) {
                 animateButton(left);
                 slideLogo(30,50);
                 num = art.artistsNames.length-1;
                 pickArtist(num); 
+                changeBackGround(num);
             }
         });
 })();
