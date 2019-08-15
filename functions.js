@@ -93,7 +93,7 @@ let toLeft = 0;
         boxNum =0;
         
         artsOfArtists[number].forEach(element => {
-            boxe += `<div class="box box${boxNum}" style="background-image: url(./images/BlackAndGold/${boxNum}.png); margin: 0px 50px;"></div>`;
+            boxe += `<div class="box box${boxNum}" style="background-image: url(./images/${number}/${boxNum}.png); margin: 0px 50px;"></div>`;
             boxNum +=1;
         });
         boxes.innerHTML = boxe;
