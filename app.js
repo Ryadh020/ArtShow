@@ -104,3 +104,11 @@ more.addEventListener("click",()=> {
             },600); 
         }  
     });
+
+    // Get more information about individual arts on clicking there boxes:
+    boxes.addEventListener("click",(ev)=> {
+
+        GetMoreDetails(ev,toLeft);
+
+
+    })
