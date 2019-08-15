@@ -93,7 +93,7 @@ let toLeft = 0;
         boxNum =0;
         
         artsOfArtists[number].forEach(element => {
-            boxe += `<div class="box box${boxNum}" style="background-image: url(${boxNum});"></div>`;
+            boxe += `<div class="box box${boxNum}" style="background-image: url(./images/BlackAndGold/${boxNum}.png); margin: 0px 50px;"></div>`;
             boxNum +=1;
         });
         boxes.innerHTML = boxe;
@@ -115,7 +115,7 @@ let toLeft = 0;
         boxClassNum = 0;
 
         artsOfArtists[number].forEach(element => {
-            document.querySelector(`.box${boxClassNum}`).style.margin = "0px 40px";
+            document.querySelector(`.box${boxClassNum}`).style.margin = "0px 45px";
             boxClassNum += 1;
         });
     } 
@@ -140,7 +140,7 @@ let toLeft = 0;
         theBox.style.width = "100vw";
         theBox.style.height = "100vh";
         theBox.style.borderRadius =  "0";
-       /* theBox.style.zIndex = "1";*/
+        theBox.style.zIndex = "1";
 
 
     }
