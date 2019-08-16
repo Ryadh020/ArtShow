@@ -1,7 +1,7 @@
 * {
     margin: 0;
     box-sizing: border-box;
-    /*outline: 1px red solid;*/
+    outline: 1px red solid;
 }
 body {
     width: 100vw;
@@ -14,7 +14,6 @@ body {
     background-image: url(./images/1.Backgrounds/1.png);
     background-size: cover;
     background-repeat: no-repeat;
-    /*font-family: 'Amatic SC', cursive;*/
     transition: all 0.3s ease-out;
 
     overflow: hidden;
@@ -52,7 +51,7 @@ li {
     transition: all 100ms ease;
 }
 .left:hover, .right:hover ,#more:hover {
-    box-shadow: 0 0 30px 2px white;
+    opacity: 0.3;
     transition: all 500ms ease;
 }
 main {
@@ -80,15 +79,15 @@ main {
     height: 400px;
 
     position: relative;
-    top: 50px;
+    /*top: 50px;*/
     z-index: -1;
 
     /*transition: all 1s ease-out;*/
 }
 .presentation, .name {
     font-size: 7vh;
-    line-height: 1.5;
-
+    line-height: 1;
+    
  /*   transition: 300ms ease-in-out all;*/
 }
                     
@@ -117,7 +116,6 @@ footer {
 .boxes {
     position: absolute;
     left: 1000px;
-    /*width: 100vw;*/
     height: 100vh;
     display: flex;
     flex-direction: row;
@@ -132,18 +130,15 @@ footer {
     height: 300px;
     border-radius: 10px;
     
-    
-    /*background-color: rgb(73, 70, 70);*/
     background-size: cover;
     background-repeat: no-repeat;
     transition: all 1s ease-out;
 }
 .box:hover {
-    /*position: absolute;
-    left: 0px;
-    width: 100vw;
-    height: 100vh;*/
+    cursor: pointer;
 
+    width: 270px;
+    height: 320px;
 
 
     transition: all 0.3s ease-out;

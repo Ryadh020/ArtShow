@@ -64,6 +64,20 @@ let toLeft = 0;
             body.style.color = "white";
         }
     }
+
+        // Change font family and color:
+    function ChangeFontFNC(id) {
+        if(id === 0) {
+            artist.style.color = "#e0cf4f";
+            artist.style.fontFamily = "'Fjalla One', sans-serif";
+        }else if(id === 1) {
+            artist.style.color = "Pink";
+            artist.style.fontFamily = "'Lobster', cursive";
+        }else if(id === 2) {
+            artist.style.color = "Black";
+            artist.style.fontFamily = "'Abril Fatface', cursive";
+        }
+    }
     
         //Animate (get smaller than bigger smoothly) left and right buttons onclick:
     function animateButton(button) {
@@ -133,15 +147,19 @@ let toLeft = 0;
     function GetMoreDetails(event,leftAbsolute) {
         
         let theBox = event.target;
+        //if(theBox.classlist = "")
+            theBox.style.position = "absolute";
+            leftAbsolute === 0?theBox.style.left = `${leftAbsolute}`:theBox.style.left = "1000px";
+            theBox.style.margin = "0 0";
+            theBox.style.width = "100vw";
+            theBox.style.height = "100vh";
+            theBox.style.borderRadius =  "0";
+            theBox.style.zIndex = "1";
 
-        theBox.style.position = "absolute";
-        leftAbsolute === 0?theBox.style.left = `${leftAbsolute}`:theBox.style.left = "1000px";
-        theBox.style.margin = "0 0";
-        theBox.style.width = "100vw";
-        theBox.style.height = "100vh";
-        theBox.style.borderRadius =  "0";
-        theBox.style.zIndex = "1";
 
 
+            theBox.innerHTML = `
+            
+            `;
     }
     

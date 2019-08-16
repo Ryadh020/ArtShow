@@ -4,6 +4,7 @@
     num = 0;
         //pick the first artist :
     pickArtist(num);
+    ChangeFontFNC(num);
         //Pick another artist(to the right):
         right.addEventListener("click", ()=> {
             if(num===0 || num <art.arts.length-1) {
@@ -12,12 +13,14 @@
                 num += 1;
                 pickArtist(num);
                 changeBackGround(num);
+                ChangeFontFNC(num);
             }else if(num===art.artistsNames.length-1) {
                 animateButton(right);
                 slideLogo(50,30);
                 num = 0;
                 pickArtist(num); 
                 changeBackGround(num);
+                ChangeFontFNC(num);
             }
         });
         //Pick another artist(to the left):
@@ -28,6 +31,7 @@
                 num -= 1;
                 pickArtist(num);
                 changeBackGround(num);
+                ChangeFontFNC(num);
                 
             }else if(num===0) {
                 animateButton(left);
@@ -35,6 +39,7 @@
                 num = art.artistsNames.length-1;
                 pickArtist(num); 
                 changeBackGround(num);
+                ChangeFontFNC(num);
             }
         });
 })();
@@ -107,8 +112,5 @@ more.addEventListener("click",()=> {
 
     // Get more information about individual arts on clicking there boxes:
     boxes.addEventListener("click",(ev)=> {
-
         GetMoreDetails(ev,toLeft);
-
-
     })
