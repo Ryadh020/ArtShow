@@ -144,10 +144,12 @@ let toLeft = 0;
     }
 
         //Get More details about aindividual arts :
-    function GetMoreDetails(event,leftAbsolute) {
+    function GetMoreDetails(event, leftAbsolute, BG, artist) {
         
-        let theBox = event.target;
-        //if(theBox.classlist = "")
+                // Assign the clicked box:
+            let theBox = event.target;
+        
+                // Show the more details window
             theBox.style.position = "absolute";
             leftAbsolute === 0?theBox.style.left = `${leftAbsolute}`:theBox.style.left = "1000px";
             theBox.style.margin = "0 0";
@@ -156,10 +158,24 @@ let toLeft = 0;
             theBox.style.borderRadius =  "0";
             theBox.style.zIndex = "1";
 
-
-
-            theBox.innerHTML = `
+                // choose the background:
+                theBox.style.backgroundImage = `url(./images/1.Backgrounds/${BG +1}.png)`;
             
+                // Fill the more details window
+            setTimeout(()=> {
+                // choose the the art number:
+                let imageFullPath = theBox.className;
+                let imageFileName = imageFullPath.split("box").pop();
+
+                theBox.innerHTML = `
+                <img src="./images/${artist}/${imageFileName}.png" alt="" srcset="" class="ArtImage">
+                <div class="info">
+                    <h1 class="infoTitle" style="color: goldenrod;">ART NAME</h1>
+                    <p class="infoDetails" style="color: white;">Oups we don't know more about it</p>
+                    <a href="" class="linkToArtist" style="color: goldenrod; border: 1px goldenrod solid;">See artist</a>
+                </div>
             `;
+            },00)
+
     }
     

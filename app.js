@@ -112,5 +112,5 @@ more.addEventListener("click",()=> {
 
     // Get more information about individual arts on clicking there boxes:
     boxes.addEventListener("click",(ev)=> {
-        GetMoreDetails(ev,toLeft);
+        GetMoreDetails(ev,toLeft,num,num);
     })
