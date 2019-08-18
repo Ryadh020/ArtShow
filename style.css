@@ -1,7 +1,7 @@
 * {
     margin: 0;
     box-sizing: border-box;
-    outline: 1px red solid;
+   /* outline: 1px red solid;*/
 }
 
 body {
@@ -139,7 +139,7 @@ footer {
 
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 } 
 
@@ -149,17 +149,14 @@ footer {
     width: 270px;
     height: 320px;
 
-
     transition: all 0.3s ease-out;
 }
 
-
-
-
-
+    /* More details info */
 .ArtImage, .info{
-    margin: 20px;
+    margin: 20px; 
     padding: 20px;
+    border-radius: 100px;
 }
 
 .info {
@@ -171,6 +168,7 @@ footer {
 .infoTitle, .infoDetails, .linkToArtist {
     margin: 7px;
 }
+
 
 .linkToArtist {
     width: 150px;
@@ -185,14 +183,7 @@ footer {
     font-size: 1rem;
 }
 
-
-
-
-
-
-
-
-/* boxes slider :*/
+    /* boxes slider :*/
 .sliders {
     position: absolute;
     z-index: 0;
