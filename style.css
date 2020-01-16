@@ -118,7 +118,6 @@ footer {
 /* ARTS OF ARTISTS :*/
 .boxes {
     position: absolute;
-    left: 1000px;
     height: 100vh;
     display: flex;
     flex-direction: row;

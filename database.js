@@ -15,9 +15,6 @@ let art = {
         ["machine", "key", "train"],
         ["potatos", "tomatos", "carrots"],
         ["potatos", "tomatos", "carrots"]
-    ],
-    aboutArtsts: [
-        
     ]
 }
 

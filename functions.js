@@ -151,3 +151,38 @@ let klicked;
             boxClassNum += 1;
         });
     }
+    // Functions for the back to menu button:
+    // hide the boxes
+    const hideBoxes = ()=> {
+        boxes.style.bottom = `${screen.height}px`
+        setTimeout(() => {
+            boxes.style.left = `${screen.width}px`;
+        }, 2000);  
+        setTimeout(() => {
+            boxes.style.bottom = `0px`
+        }, 3000);
+    }
+
+    // put down Sliders buttons :
+    const mooveDownSlidersAndTitle = ()=> {
+        setTimeout(() => {
+            sliders.style.top = "200vh"; 
+            standart.style.position = "static";
+            artistName.style.position = "static";
+            standart.style.fontSize = "7vh";
+            artistName.style.fontSize = "7vh";
+        }, 1000);
+
+    } 
+
+    // show The artist profile and sliders
+    const ShowProfileAndSliders = () => {
+        main.style.padding = "0px 28px";
+        footer.style.alignItems = "center";
+        setTimeout(() => {
+            left.style.visibility =  "visible";
+            right.style.visibility =  "visible";
+            more.style.visibility =  "visible";
+            logo.style.visibility = "visible";
+        }, 1000);
+    }

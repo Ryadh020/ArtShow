@@ -45,6 +45,8 @@
 })();
 
 // CLICK THE MORE BUTTON :
+boxes.style.left = `${screen.width}px`
+
 more.addEventListener("click",()=> {
     setTimeout(()=> {
         moveOut();
@@ -110,9 +112,43 @@ more.addEventListener("click",()=> {
         }  
     });
 
+    // Get back to the main menu
+    // Logic :
+        // A reverse process of the more button
+        // 1. get the main padding thick(0px 28px) to show the left/right buttons & get the footer align-item to center
+        // 2. get the buttons visible 
+        // 3. get the boxes of arts fail down with setting it's bottom position to -//// then it's left to 1000px then to the top with /////px
+        // 4. get the logo visible
+        // 5. Move down the standart and artistName on setting them to : position : relative & get them bigger to 7 vh
 
+        boxes.style.bottom = `0px`
+    GetBack.addEventListener("click", ()=> {
+        hideBoxes()
+        mooveDownSlidersAndTitle()
+        ShowProfileAndSliders()
+    })
 
+/*
+more.addEventListener("click",()=> {
+    setTimeout(()=> {
+        moveOut();
+    },0);
+    setTimeout(()=> {
+        fadeIt();
+        CreateBoxes(num);
+        boxes.style.left = "0px"
+    },200);
+    setTimeout(()=> {
+        logo.style.visibility = "hidden";
+        moveUp();
+        MinifyBoxesMargin(num);
+    },300);
+    setTimeout(()=> {
+        minimize(); 
+        ShowboxesSliders()
+    },400);
 
+});*/
 
 
 

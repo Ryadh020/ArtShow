@@ -4,6 +4,8 @@ const main = document.querySelector("main");
 const artist = document.querySelector(".artist");
 const footer = document.querySelector("footer");
 
+const GetBack = document.querySelector("#hamburger");
+
 const more = document.querySelector("#more");
 const left = document.querySelector("#left");
 const right = document.querySelector("#right");
