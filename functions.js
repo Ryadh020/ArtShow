@@ -3,9 +3,14 @@ let artistNames ;
 let arts;
 let num;
 let boxe = "";
+let athorBox = "";
 var boxNum;
 var boxClassNum;
 let toLeft = 0;
+let theBox;
+let imageClassName;
+let imageFileName;
+let klicked;
 
 // FUNCTIONS : 
 
@@ -111,7 +116,7 @@ let toLeft = 0;
         boxNum =0;
         
         artsOfArtists[number].forEach(element => {
-            boxe += `<div class="box box${boxNum}" style="background-image: url(./images/${number}/${boxNum}.png); margin: 0px 50px;" ></div>`;
+            boxe += `<div class="box box${boxNum}" id="" style="background-image: url(./images/${number}/${boxNum}.png); margin: 0px 50px;" ></div>`;
             boxNum +=1;
         });
         boxes.innerHTML = boxe;
@@ -143,64 +148,6 @@ let toLeft = 0;
 
         artsOfArtists[number].forEach(element => {
             document.querySelector(`.box${boxClassNum}`).style.margin = `0px ${margin}px`;
-            boxClassNum += 1;
-        });
-    }
-    let theBox;
-        //Get More details about aindividual arts :
-    function GetMoreDetails(event, leftAbsolute, BG, artist) {
-        
-                // Assign the clicked box:
-            let theBox = event.target;
-
-                // Get the target className:
-            let imageClassName = theBox.className;
-
-                // choose the the art number:
-                
-            let imageFileName = imageClassName.split("box").pop();
-
-                // Show the more details window
-            if(imageClassName === `box box${imageFileName}`) {
-                theBox.style.position = "absolute";
-                leftAbsolute === 0?theBox.style.left = `${leftAbsolute}`:theBox.style.left = "1000px";
-                theBox.style.margin = "0 0";
-                theBox.style.width = "100vw";
-                theBox.style.height = "100vh";
-                theBox.style.borderRadius =  "0";
-                theBox.style.zIndex = "1";
-            }else {
-                return;
-            }
-
-                // choose the background:
-                theBox.style.backgroundImage = `url(./images/1.Backgrounds/${BG +1}.png)`;
-            
-                // Fill the more details window
-            setTimeout(()=> {
-                
-
-                theBox.innerHTML = `
-                <div class="left fas fa-chevron-left" id="leftOnDetails"></div>
-                <div class="info">
-                    <h1 class="infoTitle" style="color: goldenrod;">ART NAME</h1>
-                    <p class="infoDetails" style="color: gray;">Oups we don't know more about it</p>
-                    <a href="" class="linkToArtist" style="color: goldenrod; border: 1px goldenrod solid;">See artist</a>
-                </div>
-                <img src="./images/${artist}/${imageFileName}.png" alt="" srcset="" class="ArtImage">
-                <div class="right fas fa-chevron-right" id="leftOnDetails" onMouseOver="getOther()"></div>
-            `;
-            },00)
-    }
-
-    function getOther() {
-        boxClassNum = 0;
-
-        artsOfArtists[num].forEach(element => {
-            //document.querySelector(`.box${boxClassNum}`).style.margin = "200px"
-            //document.querySelector(`.box${boxClassNum}`).style.height = "250px";
-            //boxes.style.paddingLeft = "900px";
-            document.querySelector(`.box${boxClassNum}`).style.zIndex = "1";
             boxClassNum += 1;
         });
     }
