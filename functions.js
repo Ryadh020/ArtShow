@@ -47,7 +47,7 @@ let klicked;
         setTimeout(()=> {
             logos = art.artistsLogos[index];
             artistNames = art.artistsNames[index];
-            arts = art.arts[index];
+            arts = artsOfArtists[index];
         
                 // Print the result :
             logo.setAttribute("src", logos);
@@ -114,12 +114,12 @@ let klicked;
         //Boxes from right to left :
     function CreateBoxes(number) {
         boxNum =0;
-        
-        artsOfArtists[number].forEach(element => {
-            boxe += `<div class="box box${boxNum}" id="" style="background-image: url(./images/${number}/${boxNum}.png); margin: 0px 50px;" ></div>`;
-            boxNum +=1;
-        });
-        boxes.innerHTML = boxe;
+        boxe = ""
+            arts.forEach(element => {
+                boxe += `<div class="box box${boxNum}" id="" style="background-image: url(./images/${number}/${boxNum}.png); margin: 0px 50px;" ></div>`;
+                boxNum +=1;
+            });
+            boxes.innerHTML = boxe;
     }
 
         //Show boxes sliders:
