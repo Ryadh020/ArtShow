@@ -157,10 +157,10 @@ let klicked;
         boxes.style.bottom = `${screen.height}px`
         setTimeout(() => {
             boxes.style.left = `${screen.width}px`;
-        }, 2000);  
+        }, 1000);  
         setTimeout(() => {
             boxes.style.bottom = `0px`
-        }, 3000);
+        }, 2100);
     }
 
     // put down Sliders buttons :

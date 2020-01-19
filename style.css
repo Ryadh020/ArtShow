@@ -124,7 +124,8 @@ footer {
     justify-content: center;
     align-items: center;
 
-    transition: all 1s ease-out;
+    transition: all ease-out;
+    transition-duration : 1s
 }
 .box {
     position: relative;

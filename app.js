@@ -69,19 +69,21 @@ more.addEventListener("click",()=> {
 });
 
 //Sliders buttons:
+    // 1. slide boxes to the right by setting the - left style - of ther container
+    // 2. when there is no boxes to swip up play with the - boxes margin - to feel the user that can't swip anymore
     //Get more boxes (to the right):
     sliderRight.addEventListener("click", ()=> {
-        if(artsOfArtists[num].length >=3  && !(toLeft === ((Math.floor((artsOfArtists[num].length)/4) * -1000)))) {
-            toLeft -= 1000;
+        if(artsOfArtists[num].length >=3  && !(toLeft === ((Math.floor((artsOfArtists[num].length)/4) * - screen.width)))) {
+            toLeft -= screen.width;
             moreBoxes(`${toLeft}px`);
-            console.log(toLeft);
+            //console.log(toLeft);
             setTimeout(()=> {
                 BigfyBoxesMargin(num, 100);
             },0);
             setTimeout(()=> {
                 MinifyBoxesMargin(num);
             },600);
-        }else if(artsOfArtists[num].length <3 || toLeft === (((artsOfArtists[num].length)/4 * -1000))) {
+        }else if(artsOfArtists[num].length <3 || toLeft === (((artsOfArtists[num].length)/4 * - screen.width))) {
             setTimeout(()=> {
                 BigfyBoxesMargin(num, 50);
             },0);
@@ -93,9 +95,9 @@ more.addEventListener("click",()=> {
     //Pick another artist(to the left):
     sliderLeft.addEventListener("click", ()=> {
         if(!(boxes.style.left === "0px")) {
-            toLeft += 1000;
+            toLeft += screen.width;
             moreBoxes(`${toLeft}`);
-            console.log(toLeft);
+            //console.log(toLeft);
             setTimeout(()=> {
                 BigfyBoxesMargin(num, 50);
             },0);
@@ -120,12 +122,16 @@ more.addEventListener("click",()=> {
         // 3. get the boxes of arts fail down with setting it's bottom position to -//// then it's left to 1000px then to the top with /////px
         // 4. get the logo visible
         // 5. Move down the standart and artistName on setting them to : position : relative & get them bigger to 7 vh
+        // 6. set the - toLeft - variable from the boxes slider to - 0 - to begin from - 0 - when cliking more again on another artist
 
         boxes.style.bottom = `0px`
     GetBack.addEventListener("click", ()=> {
         hideBoxes()
         mooveDownSlidersAndTitle()
         ShowProfileAndSliders()
+        setTimeout(() => {
+            toLeft = 0
+        }, 1000);
     })
 
 
