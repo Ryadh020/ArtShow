@@ -64,6 +64,7 @@ more.addEventListener("click",()=> {
     setTimeout(()=> {
         minimize(); 
         ShowboxesSliders()
+        BackButton(1)
     },400);
 
 });
@@ -128,6 +129,7 @@ more.addEventListener("click",()=> {
     GetBack.addEventListener("click", ()=> {
         hideBoxes()
         mooveDownSlidersAndTitle()
+        BackButton(0)
         ShowProfileAndSliders()
         setTimeout(() => {
             toLeft = 0
@@ -137,6 +139,7 @@ more.addEventListener("click",()=> {
 
 
 
+console.log(screen.width);
 
 
 

@@ -1,7 +1,7 @@
 * {
     margin: 0;
     box-sizing: border-box;
-   /* outline: 1px red solid;*/
+    outline: 1px red solid;
 }
 
 body {
@@ -16,21 +16,22 @@ body {
     background-repeat: no-repeat;
     transition: all 0.3s ease-out;
 
-    overflow: hidden;
+    overflow: scroll;
 }
-
-
-
 
                     /*TOP*/
 header {
     height: 60px;
-    padding: 20px;
+    padding: 10px;
 
     z-index: +1;
 }
 .hamburger {
     float: left;
+    width: 45px;
+    height: 45px;
+
+    opacity: 1; /* replace with visibility*/
 }
 .socialMedia {
     float: right;
@@ -40,8 +41,13 @@ header {
     padding: 0;
 }
 li {
+    width: 45px;
+    height: 45px;
     float: left;
-    margin: 0px 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px px;
 }
 
 
@@ -235,3 +241,25 @@ footer {
 }
 
 
+
+
+/*  for mobile phones */
+
+@media only screen and (max-width: 600px) {
+.logo {
+    width: 190px;
+    height: 200px;
+
+    position: relative;
+    /*top: 50px;*/
+    z-index: -1;
+
+    /*transition: all 1s ease-out;*/
+}
+.presentation, .name {
+    font-size: 3vh;
+    line-height: 1;
+    
+ /*   transition: 300ms ease-in-out all;*/
+}
+}

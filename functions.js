@@ -124,10 +124,20 @@ let klicked;
 
         //Show boxes sliders:
     function ShowboxesSliders() {
-        
         sliders.style.top = "80vh";
         //slider.style.margin = "0px 0px";
     } 
+
+        // Show the get back button
+    function BackButton(n) {
+        setTimeout(() => {
+            if (n == 1) {
+                GetBack.style.opacity = "1";
+            } else {
+                GetBack.style.opacity = "0";
+            }
+        }, 1000);
+    }
 
         //Get more boxes from right to left :
     function moreBoxes(left) {
@@ -169,8 +179,16 @@ let klicked;
             sliders.style.top = "200vh"; 
             standart.style.position = "static";
             artistName.style.position = "static";
-            standart.style.fontSize = "7vh";
-            artistName.style.fontSize = "7vh";
+
+            if(screen.width <= 600 || screen.width == 600) {
+                standart.style.fontSize = "3vh";
+                artistName.style.fontSize = "3vh";
+            }else {
+                standart.style.fontSize = "7vh";
+                artistName.style.fontSize = "7vh";
+            }
+
+
         }, 1000);
 
     } 
