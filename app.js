@@ -47,7 +47,7 @@
 // CLICK THE MORE BUTTON :
 boxes.style.left = `${screen.width}px`
 
-logo.addEventListener("click",()=> {
+artist.addEventListener("click",()=> {
     setTimeout(()=> {
         moveOut();
     },0);
