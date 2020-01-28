@@ -47,6 +47,28 @@
 // CLICK THE MORE BUTTON :
 boxes.style.left = `${screen.width}px`
 
+logo.addEventListener("click",()=> {
+    setTimeout(()=> {
+        moveOut();
+    },0);
+    setTimeout(()=> {
+        fadeIt();
+        CreateBoxes(num);
+        boxes.style.left = "0px"
+    },200);
+    setTimeout(()=> {
+        logo.style.visibility = "hidden";
+        moveUp();
+        MinifyBoxesMargin(num);
+    },300);
+    setTimeout(()=> {
+        minimize(); 
+        ShowboxesSliders()
+        BackButton(1)
+    },400);
+
+});
+
 more.addEventListener("click",()=> {
     setTimeout(()=> {
         moveOut();

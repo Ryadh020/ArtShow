@@ -1,10 +1,12 @@
 * {
     margin: 0;
     box-sizing: border-box;
-    outline: 1px red solid;
+   /* outline: 1px red solid;*/
 }
 
 body {
+    position: fixed;
+    
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -12,11 +14,11 @@ body {
 
     color: white;
     background-image: url(./images/1.Backgrounds/1.png);
-    background-size: cover;
+    background-size: auto;
     background-repeat: no-repeat;
     transition: all 0.3s ease-out;
 
-    overflow: scroll;
+    overflow: hidden;
 }
 
                     /*TOP*/
@@ -31,7 +33,7 @@ header {
     width: 45px;
     height: 45px;
 
-    opacity: 1; /* replace with visibility*/
+    opacity: 0; /* replace with visibility*/
 }
 .socialMedia {
     float: right;
@@ -131,7 +133,9 @@ footer {
     align-items: center;
 
     transition: all ease-out;
-    transition-duration : 1s
+    transition-duration : 1s;
+
+    overflow: hidden;
 }
 .box {
     position: relative;
@@ -147,6 +151,8 @@ footer {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+
+    overflow: hidden;
 } 
 
 .box:hover, .otherMoreBox:hover  {
@@ -251,15 +257,40 @@ footer {
     height: 200px;
 
     position: relative;
-    /*top: 50px;*/
     z-index: -1;
-
-    /*transition: all 1s ease-out;*/
 }
 .presentation, .name {
     font-size: 3vh;
     line-height: 1;
+}
+
+header {
+    height: 15vh;
+    padding: 10px;
+
+    z-index: +1;
+}
+
+main {
+    height: 70vh;
+    padding-top: 20vh;
     
- /*   transition: 300ms ease-in-out all;*/
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    transition: 300ms ease-in-out all;
+}
+
+footer {
+    height: 15vh;
+    
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    transition: 500ms all ease;
 }
 }
