@@ -294,3 +294,17 @@ footer {
     transition: 500ms all ease;
 }
 }
+
+@media only screen and (max-width: 850px) {
+    .logo {
+        width: 190px;
+        height: 200px;
+    
+        position: relative;
+        z-index: -1;
+    }
+    .presentation, .name {
+        font-size: 3vh;
+        line-height: 1;
+    }
+}
