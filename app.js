@@ -162,7 +162,3 @@ more.addEventListener("click",()=> {
 
 
 console.log(screen.width);
-
-
-
-        
