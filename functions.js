@@ -206,12 +206,21 @@ let klicked;
 
     // show The artist profile and sliders
     const ShowProfileAndSliders = () => {
-        main.style.padding = "0px 28px";
-        footer.style.alignItems = "center";
-        setTimeout(() => {
-            left.style.visibility =  "visible";
-            right.style.visibility =  "visible";
-            more.style.visibility =  "visible";
-            logo.style.visibility = "visible";
-        }, 1000);
+        if (screen.width <= 600 || screen.width == 600) {
+            main.style.padding = "0px 0px";
+            setTimeout(() => {
+                left.style.visibility =  "visible";
+                right.style.visibility =  "visible";
+                logo.style.visibility = "visible";
+            }, 1000);
+        } else {
+            main.style.padding = "0px 28px";
+            footer.style.alignItems = "center";
+            setTimeout(() => {
+                left.style.visibility =  "visible";
+                right.style.visibility =  "visible";
+                more.style.visibility =  "visible";
+                logo.style.visibility = "visible";
+            }, 1000);
+        }
     }

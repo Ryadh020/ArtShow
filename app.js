@@ -98,7 +98,7 @@ more.addEventListener("click",()=> {
     sliderRight.addEventListener("click", ()=> {
         if (screen.width <= 600 || screen.width == 600) {  // for mobile phones:
             if(artsOfArtists[num].length >=1  && toLeft !== -380 * artsOfArtists[num].length) {
-                toLeft -= 380;
+                toLeft -= 380; // (380 is the boxe size on mobile)
                 moreBoxes(`${toLeft}px`);
                 setTimeout(()=> {
                     BigfyBoxesMargin(num, 100);
