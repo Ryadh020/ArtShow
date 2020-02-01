@@ -96,45 +96,87 @@ more.addEventListener("click",()=> {
     // 2. when there is no boxes to swip up play with the - boxes margin - to feel the user that can't swip anymore
     //Get more boxes (to the right):
     sliderRight.addEventListener("click", ()=> {
-        if(artsOfArtists[num].length >=3  && !(toLeft === ((Math.floor((artsOfArtists[num].length)/4) * - screen.width)))) {
-            toLeft -= screen.width;
-            moreBoxes(`${toLeft}px`);
-            //console.log(toLeft);
-            setTimeout(()=> {
-                BigfyBoxesMargin(num, 100);
-            },0);
-            setTimeout(()=> {
-                MinifyBoxesMargin(num);
-            },600);
-        }else if(artsOfArtists[num].length <3 || toLeft === (((artsOfArtists[num].length)/4 * - screen.width))) {
-            setTimeout(()=> {
-                BigfyBoxesMargin(num, 50);
-            },0);
-            setTimeout(()=> {
-                MinifyBoxesMargin(num);
-            },600);
+        if (screen.width <= 600 || screen.width == 600) {  // for mobile phones:
+            if(artsOfArtists[num].length >=1  && toLeft !== -380 * artsOfArtists[num].length) {
+                toLeft -= 380;
+                moreBoxes(`${toLeft}px`);
+                setTimeout(()=> {
+                    BigfyBoxesMargin(num, 100);
+                },0);
+                setTimeout(()=> {
+                    MinifyBoxesMargin(num);
+                },600);
+            }else if(artsOfArtists[num].length <1 || toLeft == -380 * artsOfArtists[num].length) {
+                setTimeout(()=> {
+                    BigfyBoxesMargin(num, 50);
+                },0);
+                setTimeout(()=> {
+                    MinifyBoxesMargin(num);
+                },600);
+            }
+        } else {  // for desktops:
+            if(artsOfArtists[num].length >=3  && !(toLeft === ((Math.floor((artsOfArtists[num].length)/4) * - screen.width)))) {
+                toLeft -= screen.width;
+                moreBoxes(`${toLeft}px`);
+                setTimeout(()=> {
+                    BigfyBoxesMargin(num, 100);
+                },0);
+                setTimeout(()=> {
+                    MinifyBoxesMargin(num);
+                },600);
+            }else if(artsOfArtists[num].length <3 || toLeft === (((artsOfArtists[num].length)/4 * - screen.width))) {
+                setTimeout(()=> {
+                    BigfyBoxesMargin(num, 50);
+                },0);
+                setTimeout(()=> {
+                    MinifyBoxesMargin(num);
+                },600);
+            }
         }
+
+
     });
     //Pick another artist(to the left):
     sliderLeft.addEventListener("click", ()=> {
-        if(!(boxes.style.left === "0px")) {
-            toLeft += screen.width;
-            moreBoxes(`${toLeft}`);
-            //console.log(toLeft);
-            setTimeout(()=> {
-                BigfyBoxesMargin(num, 50);
-            },0);
-            setTimeout(()=> {
-                MinifyBoxesMargin(num);
-            },600);
-        }else {
-            setTimeout(()=> {
-                BigfyBoxesMargin(num, 50);
-            },0);
-            setTimeout(()=> {
-                MinifyBoxesMargin(num);
-            },600); 
-        }  
+        if (screen.width <= 600 || screen.width == 600) { // for mobile phones:
+            if(!(boxes.style.left === "0px")) {
+                toLeft += 380;
+                moreBoxes(`${toLeft}`);
+                setTimeout(()=> {
+                    BigfyBoxesMargin(num, 50);
+                },0);
+                setTimeout(()=> {
+                    MinifyBoxesMargin(num);
+                },600);
+            }else {
+                setTimeout(()=> {
+                    BigfyBoxesMargin(num, 50);
+                },0);
+                setTimeout(()=> {
+                    MinifyBoxesMargin(num);
+                },600); 
+            }  
+        } else {    // for desktops :
+            if(!(boxes.style.left === "0px")) {
+                toLeft += screen.width;
+                moreBoxes(`${toLeft}`);
+                //console.log(toLeft);
+                setTimeout(()=> {
+                    BigfyBoxesMargin(num, 50);
+                },0);
+                setTimeout(()=> {
+                    MinifyBoxesMargin(num);
+                },600);
+            }else {
+                setTimeout(()=> {
+                    BigfyBoxesMargin(num, 50);
+                },0);
+                setTimeout(()=> {
+                    MinifyBoxesMargin(num);
+                },600); 
+            }  
+        }
+ 
     });
 
     // Get back to the main menu

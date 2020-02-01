@@ -34,7 +34,7 @@ let klicked;
     }
     
         //moove the artist name to the top of the page :
-        if(screen.width <= 600) {
+        if(screen.width <= 600) {  // for mobiles
             function moveUp() {
                 standart.style.position = "absolute";
                 standart.style.top = "89px";
@@ -42,7 +42,7 @@ let klicked;
                 artistName.style.position = "absolute";
                 artistName.style.top = "105px";
             }
-        }else {
+        }else {  // for desktop
             function moveUp() {
                 standart.style.position = "absolute";
                 standart.style.top = "25px";
