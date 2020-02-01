@@ -34,23 +34,22 @@ let klicked;
     }
     
         //moove the artist name to the top of the page :
-        if(screen.width <= 600) {  // for mobiles
-            function moveUp() {
-                standart.style.position = "absolute";
-                standart.style.top = "89px";
+
+    function moveUp() {
+        if (screen.width <= 600) {  // for mobiles
+            standart.style.position = "absolute";
+            standart.style.top = "120px";
             
-                artistName.style.position = "absolute";
-                artistName.style.top = "105px";
-            }
-        }else {  // for desktop
-            function moveUp() {
-                standart.style.position = "absolute";
-                standart.style.top = "25px";
+            artistName.style.position = "absolute";
+            artistName.style.top = "136px";
+        } else {  // for desktop
+            standart.style.position = "absolute";
+            standart.style.top = "25px";
             
-                artistName.style.position = "absolute";
-                artistName.style.top = "39px";
-            }
+            artistName.style.position = "absolute";
+            artistName.style.top = "39px";
         }
+    }
 
     
         //pick the artist number :
