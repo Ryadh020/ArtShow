@@ -108,11 +108,11 @@ let klicked;
     
         //slide Artists logos :
     function slideLogo(first,second) {
-        artist.style.position = "absolute";
+        artist.style.position = "relative";
         artist.style.left = `${first}%`;
         artist.style.opacity ="0";
         setTimeout(()=> {
-            artist.style.position = "absolute";
+            artist.style.position = "relatve";
             artist.style.left = `${second}%`;
         },350)
         setTimeout(()=> {

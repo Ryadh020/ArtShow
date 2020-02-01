@@ -324,11 +324,15 @@ main {
     transition: all 1s ease-out;
 }
 #sliderLeft, #sliderRight {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
     padding: 5px;
     margin: 0px 5px;
 }
 #sliderRight:hover, #sliderLeft:hover{
     cursor: pointer;
-    color: rgb(179, 174, 174);
 }
 }
