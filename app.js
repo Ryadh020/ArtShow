@@ -9,14 +9,14 @@
         right.addEventListener("click", ()=> {
             if(num===0 || num <art.arts.length-1) {
                 animateButton(right);
-                slideLogo(50,30);
+                slideLogo(25,15);
                 num += 1;
                 pickArtist(num);
                 changeBackGround(num);
                 ChangeFontFNC(num);
             }else if(num===art.artistsNames.length-1) {
                 animateButton(right);
-                slideLogo(50,30);
+                slideLogo(25,15);
                 num = 0;
                 pickArtist(num); 
                 changeBackGround(num);
@@ -27,7 +27,7 @@
         left.addEventListener("click", ()=> {
             if(num <=art.artistsNames.length-1 && num!==0) {
                 animateButton(left);
-                slideLogo(30,50);
+                slideLogo(-15,15);
                 num -= 1;
                 pickArtist(num);
                 changeBackGround(num);
@@ -35,7 +35,7 @@
                 
             }else if(num===0) {
                 animateButton(left);
-                slideLogo(30,50);
+                slideLogo(-15,15);
                 num = art.artistsNames.length-1;
                 pickArtist(num); 
                 changeBackGround(num);
