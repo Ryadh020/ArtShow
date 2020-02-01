@@ -253,8 +253,7 @@ footer {
 /*  for mobile phones */
 
 @media only screen and (max-width: 600px) {
-
-header {
+ header {
     height: 10vh;
     padding: 10px;
     
@@ -262,7 +261,7 @@ header {
 }
 main {
     height: 90vh;
-    padding: 0 0;
+    padding-bottom: 200px;
     margin: 0 0 ;
     
     display: flex;
@@ -271,9 +270,6 @@ main {
     align-items: center;
     
     transition: 300ms ease-in-out all;
-}
-footer {
-    display: none;
 }
 
     /* buttons setting */
