@@ -73,10 +73,16 @@ let klicked;
         },600)
         if(index === 2) {
             body.style.color = "black";
+            left.style.backgroundColor = "hsla(0, 0%, 0%, 0.1)";
+            right.style.backgroundColor = "hsla(0, 0%, 0%, 0.1)";
         }else if( index === 1) {
             body.style.color = "gray";
+            left.style.backgroundColor = "hsla(0, 0%, 54%, 0.1)";
+            right.style.backgroundColor = "hsla(0, 0%, 54%, 0.1)";
         } else {
             body.style.color = "white";
+            left.style.backgroundColor = "hsla(216, 100%, 100%, 0.1)";
+            right.style.backgroundColor = "hsla(216, 100%, 100%, 0.1)";
         }
     }
 
@@ -86,7 +92,7 @@ let klicked;
             artist.style.color = "#e0cf4f";
             artist.style.fontFamily = "'Fjalla One', sans-serif";
         }else if(id === 1) {
-            artist.style.color = "Pink";
+            artist.style.color = "hsla(0, 0%, 54%, 0.4";
             artist.style.fontFamily = "'Lobster', cursive";
         }else if(id === 2) {
             artist.style.color = "Black";

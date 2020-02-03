@@ -1,7 +1,7 @@
 * {
     margin: 0;
     box-sizing: border-box;
-    outline: 1px red solid;
+    /*outline: 1px red solid;*/
 }
 
 body {
@@ -273,6 +273,14 @@ main {
 }
 
     /* buttons setting */
+.hamburger {
+    float: left;
+    margin: 14px;
+    width: 45px;
+    height: 45px;
+    
+    opacity: 0; /* replace with visibility*/
+}
 .left, .right  {
     display: flex;
     justify-content: center;
@@ -285,13 +293,9 @@ main {
     font-size: 1rem;
     border-radius: 0%;
 
-    background-color: rgb(199, 199, 199);
-    opacity: 0.1;
+    background-color: hsla(216, 100%, 100%, 0.1);
+    opacity: 1;
     transition: all 100ms ease;
-}
-.left:hover, .right:hover ,#more:hover {
-    opacity: 0.3;
-    transition: all 500ms ease;
 }
 
     /* logo settings */
