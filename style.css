@@ -42,6 +42,9 @@ header {
     margin: 0;
     padding: 0;
 }
+.social_media {
+    /*color: white;*/
+}
 li {
     width: 45px;
     height: 45px;
