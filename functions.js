@@ -65,7 +65,6 @@ let klicked;
         },650);
     }
     
-
         // Change the background:
     function changeBackGround(index) {
         setTimeout(()=> {
@@ -73,17 +72,14 @@ let klicked;
         },600)
         if(index === 2) {
             body.style.color = "black";
-            socialMedia.style.color = "black";
             left.style.backgroundColor = "hsla(0, 0%, 0%, 0.1)";
             right.style.backgroundColor = "hsla(0, 0%, 0%, 0.1)";
         }else if( index === 1) {
             body.style.color = "gray";
-            socialMedia.style.color = "gray";
             left.style.backgroundColor = "hsla(0, 0%, 54%, 0.1)";
             right.style.backgroundColor = "hsla(0, 0%, 54%, 0.1)";
         } else {
             body.style.color = "white";
-            socialMedia.style.color = "white";
             left.style.backgroundColor = "hsla(216, 100%, 100%, 0.1)";
             right.style.backgroundColor = "hsla(216, 100%, 100%, 0.1)";
         }

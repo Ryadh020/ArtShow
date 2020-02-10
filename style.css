@@ -43,7 +43,7 @@ header {
     padding: 0;
 }
 .social_media {
-    /*color: white;*/
+    color: white;
 }
 li {
     width: 45px;
@@ -54,7 +54,11 @@ li {
     align-items: center;
     margin: 0px px;
 }
-
+a{
+    color: inherit;
+    text-decoration: inherit;
+    cursor: inherit;
+}
 
                     /*MIDDLE*/
 .left, .right ,#more {

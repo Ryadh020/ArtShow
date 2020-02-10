@@ -5,7 +5,7 @@ const artist = document.querySelector(".artist");
 const footer = document.querySelector("footer");
 
 const GetBack = document.querySelector("#hamburger");
-const socialMedia = document.getElementsByClassName("social_media");
+
 
 const more = document.querySelector("#more");
 const left = document.querySelector("#left");
