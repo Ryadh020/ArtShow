@@ -97,18 +97,18 @@ more.addEventListener("click",()=> {
     //Get more boxes (to the right):
     sliderRight.addEventListener("click", ()=> {
         if (screen.width <= 600 || screen.width == 600) {  // for mobile phones:
-            if(artsOfArtists[num].length >=1  && toLeft !== -380 * artsOfArtists[num].length) {
-                toLeft -= 380; // (380 is the boxe size on mobile)
+            if(artsOfArtists[num].length >=1  && toLeft !== -335 * (artsOfArtists[num].length -1 )) {
+                toLeft -= 335; 
                 moreBoxes(`${toLeft}px`);
                 setTimeout(()=> {
-                    BigfyBoxesMargin(num, 100);
+                    BigfyBoxesMargin(num, 50);
                 },0);
                 setTimeout(()=> {
                     MinifyBoxesMargin(num);
                 },600);
-            }else if(artsOfArtists[num].length <1 || toLeft == -380 * artsOfArtists[num].length) {
+            }else if(artsOfArtists[num].length <1 || toLeft == -335 * (artsOfArtists[num].length - 1)) {
                 setTimeout(()=> {
-                    BigfyBoxesMargin(num, 50);
+                    BigfyBoxesMargin(num, 30);
                 },0);
                 setTimeout(()=> {
                     MinifyBoxesMargin(num);
@@ -139,18 +139,18 @@ more.addEventListener("click",()=> {
     //Pick another artist(to the left):
     sliderLeft.addEventListener("click", ()=> {
         if (screen.width <= 600 || screen.width == 600) { // for mobile phones:
-            if(!(boxes.style.left === "0px")) {
-                toLeft += 380;
-                moreBoxes(`${toLeft}`);
+            if(toLeft !==0 && toLeft >= -335 * (artsOfArtists[num].length - 1)) {
+                toLeft += 335;
+                moreBoxes(`${toLeft}px`);
                 setTimeout(()=> {
-                    BigfyBoxesMargin(num, 50);
+                    BigfyBoxesMargin(num, 20);
                 },0);
                 setTimeout(()=> {
                     MinifyBoxesMargin(num);
                 },600);
             }else {
                 setTimeout(()=> {
-                    BigfyBoxesMargin(num, 50);
+                    BigfyBoxesMargin(num, 30);
                 },0);
                 setTimeout(()=> {
                     MinifyBoxesMargin(num);

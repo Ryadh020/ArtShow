@@ -38,10 +38,10 @@ let klicked;
     function moveUp() {
         if (screen.width <= 600) {  // for mobiles
             standart.style.position = "absolute";
-            standart.style.top = "120px";
+            standart.style.top = "100px";
             
             artistName.style.position = "absolute";
-            artistName.style.top = "136px";
+            artistName.style.top = "116px";
         } else {  // for desktop
             standart.style.position = "absolute";
             standart.style.top = "25px";
